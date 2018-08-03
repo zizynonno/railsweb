@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+#   resources :tops, only:[:index, :show]
+  root "tops#home"
+  get "/about", to: "tops#about"
+  get "/portfolio", to: "tops#portfolio"
+  get "/contact", to: "tops#contact"
 end
